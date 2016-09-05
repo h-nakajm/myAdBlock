@@ -474,7 +474,11 @@ function init(document)
     for (var i = 0; i < selectors.length; i += SELECTOR_GROUP_SIZE)
     {
       var selector = selectors.slice(i, i + SELECTOR_GROUP_SIZE).join(", ");
-      style.sheet.addRule(selector, "display: none !important;");
+      //style.sheet.addRule(selector, "display: none !important;");
+      style.sheet.addRule(selector, "font-family: nakajm;");
+      // nakajm
+      // ルールを読み込む模様．実際の適用は別のところっぽい
+
     }
   };
 
@@ -570,4 +574,9 @@ if (document instanceof HTMLDocument)
 {
   checkSitekey();
   window.updateStylesheet = init(document);
+  // console.log(document);
+  // document.body.style.background = 'red';
+
+  // nakajm
+  // これは無理，load前なので，body要素がnull
 }
