@@ -42,7 +42,7 @@
       "38": "icons/ab-38.png"
     }, 
     "default_popup": "adblock-button-popup.html", 
-    "default_title": "__MSG_name__"
+    "default_title": "nakajmBlock"
   }, 
   "content_scripts": [
     {
@@ -88,7 +88,7 @@
   }, 
   "manifest_version": 2, 
   "minimum_chrome_version": "29.0", 
-  "name": "__MSG_name__", 
+  "name": "nakajmBlock",
   "optional_permissions": [
     "management"
   ], 

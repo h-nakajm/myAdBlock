@@ -31,6 +31,10 @@
   var filterClasses = require("filterClasses");
   var Filter = filterClasses.Filter;
   var BlockingFilter = filterClasses.BlockingFilter;
+
+  // nakajm BFILTER 違う
+  // console.log(BlockingFilter);
+
   var RegExpFilter = filterClasses.RegExpFilter;
   var Synchronizer = require("synchronizer").Synchronizer;
 
@@ -217,6 +221,8 @@
         var filter = defaultMatcher.matchesAny(message.url,
           RegExpFilter.typeMap[message.requestType], message.docDomain,
           message.thirdParty);
+
+          // nakajm BFILTER ここは通らないっぽい
         callback(filter instanceof BlockingFilter);
         break;
       case "filters.get":
