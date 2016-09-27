@@ -474,8 +474,8 @@ function init(document)
     for (var i = 0; i < selectors.length; i += SELECTOR_GROUP_SIZE)
     {
       var selector = selectors.slice(i, i + SELECTOR_GROUP_SIZE).join(", ");
-      //style.sheet.addRule(selector, "display: none !important;");
-      style.sheet.addRule(selector, "font-family: __ELEMENT__;");
+      style.sheet.addRule(selector, "display: none !important;");
+      //style.sheet.addRule(selector, "font-family: __ELEMENT__;");
       // nakajm
       // ルールを読み込む模様．実際の適用は別のところっぽい
 
